@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication1">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication1"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".AgregaEventoYActividad.EditarActividad_activity"
+            android:exported="false" />
+        <activity
+            android:name=".AgregaEventoYActividad.EditatEvento_activity"
+            android:exported="false" />
+        <activity
+            android:name=".AgregaEventoYActividad.EditarEvento_activity"
+            android:exported="false" />
+        <activity
+            android:name=".AgregaEventoYActividad.AgregarActividad_activity"
+            android:exported="false" />
+        <activity
+            android:name=".AgregaEventoYActividad.AgregarEvento_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Vicerectoria.MenuVicerectoria_activity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuRol_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".JefeCarrera.MenuListarJC_activity"
+            android:exported="false" />
+        <activity
+            android:name=".JefeCarrera.MenuAgregarJC_activity"
+            android:exported="false" />
+        <activity
+            android:name=".JefeCarrera.MenuListarJefeCarrera_activity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuProfesor_activity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuJefeCarrera_activity"
+            android:exported="false" />
+        <activity
+            android:name=".articulosVista_activity"
+            android:exported="false" />
+        <activity
+            android:name=".actividadesVista_activity"
+            android:exported="false" />
+        <activity
+            android:name=".eventosVista_activity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuEleccionRol_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ActualizarPerfil_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroProfesor_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfesorVista"
+            android:exported="false" />
+        <activity
+            android:name=".TodosProfesores"
+            android:exported="false" />
+        <activity
+            android:name=".ProfeYArt"
+            android:exported="false" />
+        <activity
+            android:name=".Generales"
+            android:exported="false" />
+        <!--
+android:name=".SplashActivity"
+        android:theme="@style/SplashTheme"
+        -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Menu"
+            android:exported="false" />
+    </application>
+
+</manifest>

@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfeYArt"
+    android:background="@drawable/img">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona la Fecha Para Buscar el Articulo"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:background="#558B2F"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/Fechainicio"
+                android:textStyle="italic"
+                android:textSize="17dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FechaInicio"
+                android:background="#D84315"/>
+
+            <TextView
+                android:id="@+id/FechaFinal"
+                android:textStyle="italic"
+                android:textSize="17dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#D84315"
+                android:text="FechaFinal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:onClick="SelectFechaInicio"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="SelectFechaFinal"
+                android:text="Final" />
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#C81EB8"
+            android:text="Buscar Articulos"
+            android:onClick="BuscarArticulos"/>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:id="@+id/TablaArticulos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#C950330E">
+
+                    <TableRow
+                        android:id="@+id/header_titles"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:gravity="center"
+                        android:background="#33691E">
+
+                        <TextView
+                            android:layout_width="94dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Nombre"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="TipoCRL"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="TipoNI"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Profesores"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Posicion"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Validado"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Fecha"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    //Fila Articulo 1
+
+                    <TableRow
+                        android:id="@+id/TablaArticulos1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/Nombre11"
+                            android:layout_width="177dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/TipoCRL12"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/TipoNI13"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                                android:id="@+id/Profesores14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black" />
+
+
+
+                        <TextView
+                            android:id="@+id/Posicion15"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Validado16"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Fecha16"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+                    </TableRow>
+                    //Fila Articulo 2
+
+                    <TableRow
+                        android:id="@+id/TablaArticulos2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/Nombre21"
+                            android:layout_width="94dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/TipoCRL22"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/TipoNI23"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Profesores24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Posicion25"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Validado26"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Fecha26"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+                    </TableRow>
+                    //Fila Articulo 3
+
+                    <TableRow
+                        android:id="@+id/TablaArticulos3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/Nombre31"
+                            android:layout_width="94dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/TipoCRL32"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/TipoNI33"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Profesores34"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Posicion35"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Validado36"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Fecha36"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+                    </TableRow>
+                    //Fila Articulo 4
+
+                    <TableRow
+                        android:id="@+id/TablaArticulos4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/Nombre41"
+                            android:layout_width="94dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/TipoCRL42"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/TipoNI43"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Profesores44"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Posicion45"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Validado46"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Fecha46"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+                    </TableRow>
+
+                    //Fila Articulo 5
+
+                    <TableRow
+                        android:id="@+id/TablaArticulos5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/Nombre51"
+                            android:layout_width="94dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/TipoCRL52"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/TipoNI53"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Profesores54"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Posicion55"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Validado56"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/Fecha56"
+                            android:layout_width="118dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black" />
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+    </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
